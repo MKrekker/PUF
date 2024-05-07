@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1715108879">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1715115669">
   <File Type="VDS-TIMING-PB" Name="system_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="system_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="system_wrapper.dcp"/>
@@ -76,19 +76,24 @@
     <Filter Type="Constrs"/>
     <File Path="$PPRDIR/src/xdc/pin.xdc">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/src/xdc/area.xdc">
+    <File Path="$PPRDIR/src/xdc/area_1.xdc">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/src/xdc/puf_loc.xdc">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/src/xdc/puf_loc.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
