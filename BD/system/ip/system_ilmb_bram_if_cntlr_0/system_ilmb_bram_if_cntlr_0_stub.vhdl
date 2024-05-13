@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Mon May  6 23:28:07 2024
+-- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+-- Date        : Sat May 11 14:16:00 2024
 -- Host        : krek07-HP-Laptop-15s-eq2xxx running 64-bit Ubuntu 22.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top system_ilmb_bram_if_cntlr_0 -prefix
---               system_ilmb_bram_if_cntlr_0_ system_ilmb_bram_if_cntlr_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/krek07/Documents/PUF/BD/system/ip/system_ilmb_bram_if_cntlr_0/system_ilmb_bram_if_cntlr_0_stub.vhdl
 -- Design      : system_ilmb_bram_if_cntlr_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1
@@ -44,6 +44,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "LMB_Clk,LMB_Rst,LMB_ABus[0:31],LMB_WriteDBus[0:31],LMB_AddrStrobe,LMB_ReadStrobe,LMB_WriteStrobe,LMB_BE[0:3],Sl_DBus[0:31],Sl_Ready,Sl_Wait,Sl_UE,Sl_CE,BRAM_Rst_A,BRAM_Clk_A,BRAM_Addr_A[0:31],BRAM_EN_A,BRAM_WEN_A[0:3],BRAM_Dout_A[0:31],BRAM_Din_A[0:31]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "lmb_bram_if_cntlr,Vivado 2019.2";
+attribute x_core_info of stub : architecture is "lmb_bram_if_cntlr,Vivado 2019.1";
 begin
 end;

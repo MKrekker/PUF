@@ -3,9 +3,9 @@
 
 # XDC: /home/krek07/Documents/PUF/src/xdc/pin.xdc
 
-# XDC: /home/krek07/Documents/PUF/src/xdc/area_1.xdc
+# XDC: /home/krek07/Documents/PUF/src/xdc/area_2.xdc
 
-# XDC: /home/krek07/Documents/PUF/src/xdc/puf_loc.xdc
+# XDC: /home/krek07/Documents/PUF/src/xdc/debug.xdc
 
 # Block Designs: /home/krek07/Documents/PUF/BD/system/system.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system || ORIG_REF_NAME==system} -quiet] -quiet
@@ -57,5 +57,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_gpio
 
 # IP: /home/krek07/Documents/PUF/BD/system/ip/system_arbiter_puf_0_0/system_arbiter_puf_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_arbiter_puf_0_0 || ORIG_REF_NAME==system_arbiter_puf_0_0} -quiet] -quiet
+
+# IP: /home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/system_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ila_1_0 || ORIG_REF_NAME==system_ila_1_0} -quiet] -quiet
+
+# IP: /home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/system_ila_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ila_2_0 || ORIG_REF_NAME==system_ila_2_0} -quiet] -quiet
 
 # XDC: /home/krek07/Documents/PUF/BD/system/system_ooc.xdc

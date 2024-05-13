@@ -1,0 +1,43 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "xuartlite.h"
+
+
+XGpio Gpio_0;
+XGpio Gpio_1;
+XUartLite UartLite;
+
+void set_challenge(int challenge);
+void create_pulse();
+void get_response();
+
+
+int main(void){
+
+	int Status;
+
+	Status = XGpio_Initialize(&Gpio_0, XPAR_GPIO_0_DEVICE_ID);
+	if(Status != XST_SUCCESS){
+		xil_printf("Gpio_0 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	Status = XGpio_Initialize(&Gpio_1, XPAR_GPIO_1_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio_1 Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	Status = XUartLite_Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+	if(Status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	return 0;
+}
+
+void set_challenge(){
+
+	XGpio_DiscreteWrite(XGpio *InstancePtr, unsigned Channel, u32 Mask);
+}

@@ -1,0 +1,6 @@
+01:10:36 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+
+01:10:36 Build Finished (took 271ms)
+

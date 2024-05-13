@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May  7 23:02:50 2024
+| Date         : Fri May 10 23:30:58 2024
 | Host         : krek07-HP-Laptop-15s-eq2xxx running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
 | Design       : system_wrapper
@@ -24,15 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
-+-------------+----------+--------------------------------------------------------------------------+------------+
-| Rule        | Severity | Description                                                              | Violations |
-+-------------+----------+--------------------------------------------------------------------------+------------+
-| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties                      | 1          |
-| LOCE-1      | Warning  | Pblock ranges contradict LOC constraints on logic assigned to the Pblock | 1          |
-| PDRC-153    | Warning  | Gated clock check                                                        | 1          |
-| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations              | 1          |
-+-------------+----------+--------------------------------------------------------------------------+------------+
+             Violations found: 2
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -47,16 +45,6 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
-Related violations: <none>
-
-LOCE-1#1 Warning
-Pblock ranges contradict LOC constraints on logic assigned to the Pblock  - PBlock:pblock_arbiter_puf_0
-Pblock pblock_arbiter_puf_0's ranges fail to contain LOC constraints on assigned instance system_i/arbiter_puf_0/inst/inst_dff/oq_reg (and 64 other instances).
-Related violations: <none>
-
-PDRC-153#1 Warning
-Gated clock check  
-Net system_i/arbiter_puf_0/inst/inst_delay_line/genblk1[32].inst_mux_2/oout is a gated clock net sourced by a combinational pin system_i/arbiter_puf_0/inst/inst_delay_line/genblk1[32].inst_mux_2/oout_INST_0/O, cell system_i/arbiter_puf_0/inst/inst_delay_line/genblk1[32].inst_mux_2/oout_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning

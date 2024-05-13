@@ -130,20 +130,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/src/xdc/area_1.xdc">
+      <File Path="$PPRDIR/src/xdc/area_2.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/src/xdc/puf_loc.xdc">
+      <File Path="$PPRDIR/src/xdc/debug.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PPRDIR/src/xdc/puf_loc.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PPRDIR/src/xdc/debug.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

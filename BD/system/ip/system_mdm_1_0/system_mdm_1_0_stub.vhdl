@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Mon May  6 23:27:19 2024
+-- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+-- Date        : Sat May 11 14:02:42 2024
 -- Host        : krek07-HP-Laptop-15s-eq2xxx running 64-bit Ubuntu 22.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top system_mdm_1_0 -prefix
---               system_mdm_1_0_ system_mdm_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/krek07/Documents/PUF/BD/system/ip/system_mdm_1_0/system_mdm_1_0_stub.vhdl
 -- Design      : system_mdm_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1
@@ -54,6 +54,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "S_AXI_ACLK,S_AXI_ARESETN,Interrupt,Debug_SYS_Rst,S_AXI_AWADDR[3:0],S_AXI_AWVALID,S_AXI_AWREADY,S_AXI_WDATA[31:0],S_AXI_WSTRB[3:0],S_AXI_WVALID,S_AXI_WREADY,S_AXI_BRESP[1:0],S_AXI_BVALID,S_AXI_BREADY,S_AXI_ARADDR[3:0],S_AXI_ARVALID,S_AXI_ARREADY,S_AXI_RDATA[31:0],S_AXI_RRESP[1:0],S_AXI_RVALID,S_AXI_RREADY,Dbg_Clk_0,Dbg_TDI_0,Dbg_TDO_0,Dbg_Reg_En_0[0:7],Dbg_Capture_0,Dbg_Shift_0,Dbg_Update_0,Dbg_Rst_0,Dbg_Disable_0";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "MDM,Vivado 2019.2";
+attribute x_core_info of stub : architecture is "MDM,Vivado 2019.1";
 begin
 end;

@@ -1,5 +1,5 @@
 # file: system_mdm_1_0.xdc
-# (c) Copyright 2013-2019 Xilinx, Inc. All rights reserved.
+# (c) Copyright 2013-2018 Xilinx, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of Xilinx, Inc. and is protected under U.S. and
@@ -185,8 +185,6 @@ create_waiver -internal -quiet -user mdm -tags 12436 -type CDC -id CDC-1 -descri
   -from *PIN -to [get_pins -quiet MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/D]
 create_waiver -internal -quiet -user mdm -tags 12436 -type CDC -id CDC-1 -description "Debug protocol ensures stable signals" \
   -from *PIN -to [get_pins -quiet MDM_Core_I1/JTAG_CONTROL_I/Use_UART.fifo_*_reg/D]
-create_waiver -internal -quiet -user mdm -tags 12436 -type CDC -id CDC-1 -description "Debug protocol ensures stable signals" \
-  -from [get_pins -quiet MDM_Core_I1/JTAG_CONTROL_I/Use_UART.tdo_reg_reg\[*\]/C] -to *PIN
 create_waiver -internal -quiet -user mdm -tags 12436 -type CDC -id CDC-7 -description "Debug protocol ensures stable signals" \
   -from *PIN -to [get_pins -quiet MDM_Core_I1/JTAG_CONTROL_I/Use_UART.execute_reg/CLR]
 create_waiver -internal -quiet -user mdm -tags 12436 -type CDC -id CDC-13 -description "Debug protocol ensures stable signals" \

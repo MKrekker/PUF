@@ -1,0 +1,195 @@
+15:04:50 INFO  : Registering command handlers for SDK TCF services
+15:04:51 INFO  : Launching XSCT server: xsct -n -interactive /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/temp_xsdb_launch_script.tcl
+15:04:54 INFO  : XSCT server has started successfully.
+15:04:54 INFO  : Successfully done setting XSCT server connection channel  
+15:04:55 INFO  : Successfully done setting SDK workspace  
+15:04:55 INFO  : Processing command line option -hwspec /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/system_wrapper.hdf.
+00:42:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:42:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:43:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:43:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:48:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:48:28 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352AD6F89A' is selected.
+00:48:28 INFO  : 'jtag frequency' command is executed.
+00:48:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0' command is executed.
+00:48:30 INFO  : FPGA configured successfully with bitstream "/home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit"
+00:48:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:48:30 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:30 INFO  : System reset is completed.
+00:48:33 INFO  : 'after 3000' command is executed.
+00:48:33 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:33 INFO  : The application '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf' is downloaded to processor 'microblaze_0'.
+00:48:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0
+fpga -file /home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+dow /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf
+----------------End of Script----------------
+
+00:48:33 INFO  : Memory regions updated for context MicroBlaze #0
+00:48:33 INFO  : Memory regions updated for context MicroBlaze #0
+00:48:33 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:33 INFO  : 'con' command is executed.
+00:48:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+con
+----------------End of Script----------------
+
+00:48:33 INFO  : Launch script is exported to file '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
+00:49:36 ERROR : Unexpected error while writing to XSCT Console View.
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:231)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:226)
+	at com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsolePresenter.appendToConsole(XSDBConsolePresenter.java:270)
+	at com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsolePresenter.printOut(XSDBConsolePresenter.java:239)
+	at com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsolePresenter.access$4(XSDBConsolePresenter.java:238)
+	at com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsolePresenter$2.run(XSDBConsolePresenter.java:178)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+01:02:00 INFO  : Disconnected from the channel tcfchan#1.
+01:06:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:06:48 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352AD6F89A' is selected.
+01:06:48 INFO  : 'jtag frequency' command is executed.
+01:06:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0' command is executed.
+01:06:50 INFO  : FPGA configured successfully with bitstream "/home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit"
+01:06:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:06:50 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:50 INFO  : System reset is completed.
+01:06:53 INFO  : 'after 3000' command is executed.
+01:06:53 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:53 INFO  : The application '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf' is downloaded to processor 'microblaze_0'.
+01:06:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0
+fpga -file /home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+dow /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf
+----------------End of Script----------------
+
+01:06:53 INFO  : Memory regions updated for context MicroBlaze #0
+01:06:53 INFO  : Memory regions updated for context MicroBlaze #0
+01:06:53 INFO  : Context for processor 'microblaze_0' is selected.
+01:06:53 INFO  : 'con' command is executed.
+01:06:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+con
+----------------End of Script----------------
+
+01:06:53 INFO  : Launch script is exported to file '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
+01:08:39 INFO  : Disconnected from the channel tcfchan#2.
+01:08:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:08:40 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352AD6F89A' is selected.
+01:08:40 INFO  : 'jtag frequency' command is executed.
+01:08:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0' command is executed.
+01:08:42 INFO  : FPGA configured successfully with bitstream "/home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit"
+01:08:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:08:42 INFO  : Context for processor 'microblaze_0' is selected.
+01:08:42 INFO  : System reset is completed.
+01:08:45 INFO  : 'after 3000' command is executed.
+01:08:45 INFO  : Context for processor 'microblaze_0' is selected.
+01:08:45 INFO  : The application '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf' is downloaded to processor 'microblaze_0'.
+01:08:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0
+fpga -file /home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+dow /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf
+----------------End of Script----------------
+
+01:08:45 INFO  : Memory regions updated for context MicroBlaze #0
+01:08:45 INFO  : Memory regions updated for context MicroBlaze #0
+01:08:45 INFO  : Context for processor 'microblaze_0' is selected.
+01:08:45 INFO  : 'con' command is executed.
+01:08:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+con
+----------------End of Script----------------
+
+01:08:45 INFO  : Launch script is exported to file '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
+01:09:16 INFO  : Disconnected from the channel tcfchan#3.
+01:09:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:09:17 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352AD6F89A' is selected.
+01:09:17 INFO  : 'jtag frequency' command is executed.
+01:09:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0' command is executed.
+01:09:18 INFO  : FPGA configured successfully with bitstream "/home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit"
+01:09:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:09:18 INFO  : Context for processor 'microblaze_0' is selected.
+01:09:18 INFO  : System reset is completed.
+01:09:21 INFO  : 'after 3000' command is executed.
+01:09:21 INFO  : Context for processor 'microblaze_0' is selected.
+01:09:21 INFO  : The application '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf' is downloaded to processor 'microblaze_0'.
+01:09:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0
+fpga -file /home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+dow /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf
+----------------End of Script----------------
+
+01:09:21 INFO  : Memory regions updated for context MicroBlaze #0
+01:09:21 INFO  : Memory regions updated for context MicroBlaze #0
+01:09:21 INFO  : Context for processor 'microblaze_0' is selected.
+01:09:21 INFO  : 'con' command is executed.
+01:09:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+con
+----------------End of Script----------------
+
+01:09:21 INFO  : Launch script is exported to file '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
+01:10:38 INFO  : Disconnected from the channel tcfchan#4.
+01:10:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:10:39 INFO  : Jtag cable 'Digilent Arty S7 - 50 210352AD6F89A' is selected.
+01:10:39 INFO  : 'jtag frequency' command is executed.
+01:10:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0' command is executed.
+01:10:40 INFO  : FPGA configured successfully with bitstream "/home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit"
+01:10:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:10:40 INFO  : Context for processor 'microblaze_0' is selected.
+01:10:41 INFO  : System reset is completed.
+01:10:44 INFO  : 'after 3000' command is executed.
+01:10:44 INFO  : Context for processor 'microblaze_0' is selected.
+01:10:44 INFO  : The application '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf' is downloaded to processor 'microblaze_0'.
+01:10:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A" && level==0} -index 0
+fpga -file /home/krek07/Documents/PUF/PUF20191/project_1/project_1.runs/impl_1/system_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+dow /home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/arbiter_puf/Debug/arbiter_puf.elf
+----------------End of Script----------------
+
+01:10:44 INFO  : Memory regions updated for context MicroBlaze #0
+01:10:44 INFO  : Memory regions updated for context MicroBlaze #0
+01:10:44 INFO  : Context for processor 'microblaze_0' is selected.
+01:10:44 INFO  : 'con' command is executed.
+01:10:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty S7 - 50 210352AD6F89A"} -index 0
+con
+----------------End of Script----------------
+
+01:10:44 INFO  : Launch script is exported to file '/home/krek07/Documents/PUF/PUF20191/project_1/project_1.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_on_local.tcl'
+01:11:55 INFO  : Disconnected from the channel tcfchan#5.

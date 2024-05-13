@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Mon May  6 23:28:08 2024
+-- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+-- Date        : Sat May 11 14:16:00 2024
 -- Host        : krek07-HP-Laptop-15s-eq2xxx running 64-bit Ubuntu 22.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top system_rst_clk_wiz_1_100M_0 -prefix
---               system_rst_clk_wiz_1_100M_0_ system_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/krek07/Documents/PUF/BD/system/ip/system_rst_clk_wiz_1_100M_0/system_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
 -- Design      : system_rst_clk_wiz_1_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity system_rst_clk_wiz_1_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_1_100M_0_cdc_sync : entity is "cdc_sync";
 end system_rst_clk_wiz_1_100M_0_cdc_sync;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_cdc_sync is
@@ -124,9 +126,7 @@ entity system_rst_clk_wiz_1_100M_0_cdc_sync_0 is
     lpf_exr_reg : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
     lpf_exr : in STD_LOGIC;
-    p_1_in4_in : in STD_LOGIC;
-    p_2_in3_in : in STD_LOGIC;
-    exr_lpf : in STD_LOGIC_VECTOR ( 0 to 0 );
+    p_3_out : in STD_LOGIC_VECTOR ( 2 downto 0 );
     mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
@@ -217,10 +217,10 @@ lpf_exr_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => lpf_exr,
-      I1 => p_1_in4_in,
-      I2 => p_2_in3_in,
+      I1 => p_3_out(1),
+      I2 => p_3_out(2),
       I3 => \^scndry_out\,
-      I4 => exr_lpf(0),
+      I4 => p_3_out(0),
       O => lpf_exr_reg
     );
 end STRUCTURE;
@@ -235,6 +235,8 @@ entity system_rst_clk_wiz_1_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_1_100M_0_upcnt_n : entity is "upcnt_n";
 end system_rst_clk_wiz_1_100M_0_upcnt_n;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_upcnt_n is
@@ -399,6 +401,8 @@ entity system_rst_clk_wiz_1_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_1_100M_0_lpf : entity is "lpf";
 end system_rst_clk_wiz_1_100M_0_lpf;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_lpf is
@@ -406,16 +410,13 @@ architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_lpf is
   signal \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0\ : STD_LOGIC;
   signal Q : STD_LOGIC;
   signal asr_lpf : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal exr_lpf : STD_LOGIC_VECTOR ( 0 to 0 );
   signal lpf_asr : STD_LOGIC;
   signal lpf_exr : STD_LOGIC;
   signal \lpf_int0__0\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC;
-  signal p_1_in4_in : STD_LOGIC;
   signal p_2_in : STD_LOGIC;
-  signal p_2_in3_in : STD_LOGIC;
   signal p_3_in1_in : STD_LOGIC;
-  signal p_3_in6_in : STD_LOGIC;
+  signal p_3_out : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of POR_SRL_I : label is "SRL16";
   attribute box_type : string;
@@ -436,14 +437,12 @@ begin
     );
 \ACTIVE_LOW_EXT.ACT_LO_EXT\: entity work.system_rst_clk_wiz_1_100M_0_cdc_sync_0
      port map (
-      exr_lpf(0) => exr_lpf(0),
       ext_reset_in => ext_reset_in,
       lpf_exr => lpf_exr,
       lpf_exr_reg => \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0\,
       mb_debug_sys_rst => mb_debug_sys_rst,
-      p_1_in4_in => p_1_in4_in,
-      p_2_in3_in => p_2_in3_in,
-      scndry_out => p_3_in6_in,
+      p_3_out(2 downto 0) => p_3_out(2 downto 0),
+      scndry_out => p_3_out(3),
       slowest_sync_clk => slowest_sync_clk
     );
 \AUX_LPF[1].asr_lpf_reg[1]\: unisim.vcomponents.FDRE
@@ -486,8 +485,8 @@ begin
         port map (
       C => slowest_sync_clk,
       CE => '1',
-      D => p_3_in6_in,
-      Q => p_2_in3_in,
+      D => p_3_out(3),
+      Q => p_3_out(2),
       R => '0'
     );
 \EXT_LPF[2].exr_lpf_reg[2]\: unisim.vcomponents.FDRE
@@ -497,8 +496,8 @@ begin
         port map (
       C => slowest_sync_clk,
       CE => '1',
-      D => p_2_in3_in,
-      Q => p_1_in4_in,
+      D => p_3_out(2),
+      Q => p_3_out(1),
       R => '0'
     );
 \EXT_LPF[3].exr_lpf_reg[3]\: unisim.vcomponents.FDRE
@@ -508,8 +507,8 @@ begin
         port map (
       C => slowest_sync_clk,
       CE => '1',
-      D => p_1_in4_in,
-      Q => exr_lpf(0),
+      D => p_3_out(1),
+      Q => p_3_out(0),
       R => '0'
     );
 POR_SRL_I: unisim.vcomponents.SRL16E
@@ -585,6 +584,8 @@ entity system_rst_clk_wiz_1_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_1_100M_0_sequence_psr : entity is "sequence_psr";
 end system_rst_clk_wiz_1_100M_0_sequence_psr;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_sequence_psr is
@@ -923,6 +924,8 @@ entity system_rst_clk_wiz_1_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end system_rst_clk_wiz_1_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0_proc_sys_reset is
@@ -1053,7 +1056,7 @@ entity system_rst_clk_wiz_1_100M_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_rst_clk_wiz_1_100M_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_rst_clk_wiz_1_100M_0 : entity is "proc_sys_reset,Vivado 2019.2";
+  attribute x_core_info of system_rst_clk_wiz_1_100M_0 : entity is "proc_sys_reset,Vivado 2019.1";
 end system_rst_clk_wiz_1_100M_0;
 
 architecture STRUCTURE of system_rst_clk_wiz_1_100M_0 is

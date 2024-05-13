@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue May  7 23:01:10 2024
-# Process ID: 201549
+# Start of session at: Fri May 10 23:26:23 2024
+# Process ID: 600405
 # Current directory: /home/krek07/Documents/PUF/PUF.runs/synth_1
 # Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file: /home/krek07/Documents/PUF/PUF.runs/synth_1/system_wrapper.vds
@@ -13,76 +13,91 @@ source system_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1665.867 ; gain = 230.148 ; free physical = 1104 ; free virtual = 4450
 Command: synth_design -top system_wrapper -part xc7s50csga324-1 -flatten_hierarchy none
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 201626 
+INFO: Helper process launched with PID 600478 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1888.727 ; gain = 200.688 ; free physical = 336 ; free virtual = 7294
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1910.500 ; gain = 200.688 ; free physical = 616 ; free virtual = 3976
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [/home/krek07/Documents/PUF/BD/system/hdl/system_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'system' [/home/krek07/Documents/PUF/BD/system/synth/system.v:921]
-INFO: [Synth 8-6157] synthesizing module 'system_arbiter_puf_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_arbiter_puf_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_arbiter_puf_0_0' (1#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_arbiter_puf_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (2#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_1_0' (3#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_uartlite_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_uartlite_0_0' (4#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_uartlite_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'system_axi_uartlite_0_0' has 22 connections declared, but only 21 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1108]
-INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_1_0' (5#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'system_mdm_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_mdm_1_0' (6#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_mdm_1_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'system_mdm_1_0' has 30 connections declared, but only 29 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1134]
-INFO: [Synth 8-6157] synthesizing module 'system_microblaze_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_microblaze_0_0' (7#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'system_microblaze_0_0' has 52 connections declared, but only 51 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1166]
-INFO: [Synth 8-6157] synthesizing module 'system_microblaze_0_axi_periph_0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:1353]
+INFO: [Synth 8-6157] synthesizing module 'system' [/home/krek07/Documents/PUF/BD/system/synth/system.v:935]
+INFO: [Synth 8-6157] synthesizing module 'system_arbiter_puf_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_arbiter_puf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_arbiter_puf_0_0' (1#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_arbiter_puf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (2#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_1_0' (3#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_uartlite_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_uartlite_0_0' (4#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_axi_uartlite_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'system_axi_uartlite_0_0' has 22 connections declared, but only 21 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1124]
+INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_1_0' (5#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/krek07/Documents/PUF/BD/system/synth/system.v:1150]
+INFO: [Synth 8-6157] synthesizing module 'system_ila_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ila_1_0' (6#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ila_1_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/krek07/Documents/PUF/BD/system/synth/system.v:1171]
+INFO: [Synth 8-6157] synthesizing module 'system_ila_2_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ila_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ila_2_0' (7#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ila_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_mdm_1_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_mdm_1_0' (8#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'system_mdm_1_0' has 30 connections declared, but only 29 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1176]
+INFO: [Synth 8-6157] synthesizing module 'system_microblaze_0_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_microblaze_0_0' (9#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'system_microblaze_0_0' has 52 connections declared, but only 51 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1208]
+INFO: [Synth 8-6157] synthesizing module 'system_microblaze_0_axi_periph_0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:1397]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1RZ0IW6' [/home/krek07/Documents/PUF/BD/system/synth/system.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1RZ0IW6' (8#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1RZ0IW6' (10#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_K87I2F' [/home/krek07/Documents/PUF/BD/system/synth/system.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_K87I2F' (9#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:144]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_QYRHL1' [/home/krek07/Documents/PUF/BD/system/synth/system.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_QYRHL1' (10#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:276]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1LIFQL0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1LIFQL0' (11#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:408]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LZPV07' [/home/krek07/Documents/PUF/BD/system/synth/system.v:774]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LZPV07' (12#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:774]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (13#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_xbar_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'system_xbar_0' has 40 connections declared, but only 38 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:2018]
-INFO: [Synth 8-6155] done synthesizing module 'system_microblaze_0_axi_periph_0' (14#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:1353]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_OGE0N8' [/home/krek07/Documents/PUF/BD/system/synth/system.v:540]
-INFO: [Synth 8-6157] synthesizing module 'system_dlmb_bram_if_cntlr_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_dlmb_bram_if_cntlr_0' (15#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_dlmb_v10_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_dlmb_v10_0' (16#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'system_dlmb_v10_0' has 25 connections declared, but only 24 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:686]
-INFO: [Synth 8-6157] synthesizing module 'system_ilmb_bram_if_cntlr_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ilmb_bram_if_cntlr_0' (17#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_ilmb_v10_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ilmb_v10_0' (18#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'system_ilmb_v10_0' has 25 connections declared, but only 24 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:732]
-INFO: [Synth 8-6157] synthesizing module 'system_lmb_bram_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_lmb_bram_0' (19#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'system_lmb_bram_0' has 16 connections declared, but only 14 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:757]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_OGE0N8' (20#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:540]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_clk_wiz_1_100M_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_rst_clk_wiz_1_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_clk_wiz_1_100M_0' (21#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-201549-krek07-HP-Laptop-15s-eq2xxx/realtime/system_rst_clk_wiz_1_100M_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'system_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1340]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_K87I2F' (11#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_QYRHL1' [/home/krek07/Documents/PUF/BD/system/synth/system.v:290]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_QYRHL1' (12#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:290]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1LIFQL0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:422]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1LIFQL0' (13#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:422]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1LZPV07' [/home/krek07/Documents/PUF/BD/system/synth/system.v:788]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1LZPV07' (14#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:788]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (15#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (12) of module 'system_xbar_0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:2082]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (12) of module 'system_xbar_0' [/home/krek07/Documents/PUF/BD/system/synth/system.v:2086]
+INFO: [Synth 8-6155] done synthesizing module 'system_microblaze_0_axi_periph_0' (16#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:1397]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_OGE0N8' [/home/krek07/Documents/PUF/BD/system/synth/system.v:554]
+INFO: [Synth 8-6157] synthesizing module 'system_dlmb_bram_if_cntlr_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dlmb_bram_if_cntlr_0' (17#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_dlmb_v10_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_dlmb_v10_0' (18#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'system_dlmb_v10_0' has 25 connections declared, but only 24 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:700]
+INFO: [Synth 8-6157] synthesizing module 'system_ilmb_bram_if_cntlr_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ilmb_bram_if_cntlr_0' (19#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ilmb_v10_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ilmb_v10_0' (20#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'system_ilmb_v10_0' has 25 connections declared, but only 24 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:746]
+INFO: [Synth 8-6157] synthesizing module 'system_lmb_bram_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_lmb_bram_0' (21#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'system_lmb_bram_0' has 16 connections declared, but only 14 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:771]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_OGE0N8' (22#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:554]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_clk_wiz_1_100M_0' [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_rst_clk_wiz_1_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_clk_wiz_1_100M_0' (23#1) [/home/krek07/Documents/PUF/PUF.runs/synth_1/.Xil/Vivado-600405-krek07-HP-Laptop-15s-eq2xxx/realtime/system_rst_clk_wiz_1_100M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'system_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [/home/krek07/Documents/PUF/BD/system/synth/system.v:1384]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_0' [/home/krek07/Documents/PUF/BD/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [/home/krek07/Documents/PUF/BD/system/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (22#1) [/home/krek07/Documents/PUF/BD/system/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (23#1) [/home/krek07/Documents/PUF/BD/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'system' (24#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:921]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (25#1) [/home/krek07/Documents/PUF/BD/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (24#1) [/home/krek07/Documents/PUF/BD/system/ipshared/34f7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (25#1) [/home/krek07/Documents/PUF/BD/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_uartlite_0'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1124]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'microblaze_0_axi_periph'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1260]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1150]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_1'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1102]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1171]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'arbiter_puf_0'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1077]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/krek07/Documents/PUF/BD/system/synth/system.v:1081]
+INFO: [Synth 8-6155] done synthesizing module 'system' (26#1) [/home/krek07/Documents/PUF/BD/system/synth/system.v:935]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (27#1) [/home/krek07/Documents/PUF/BD/system/hdl/system_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1LZPV07 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1LZPV07 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s00_couplers_imp_1LZPV07 has unconnected port S_ACLK
@@ -114,7 +129,7 @@ WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected 
 WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1955.445 ; gain = 267.406 ; free physical = 374 ; free virtual = 7329
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1976.219 ; gain = 266.406 ; free physical = 645 ; free virtual = 4006
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -127,12 +142,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1955.445 ; gain = 267.406 ; free physical = 370 ; free virtual = 7325
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1979.188 ; gain = 269.375 ; free physical = 643 ; free virtual = 4004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1955.445 ; gain = 267.406 ; free physical = 370 ; free virtual = 7325
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1979.188 ; gain = 269.375 ; free physical = 643 ; free virtual = 4004
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1955.445 ; gain = 0.000 ; free physical = 362 ; free virtual = 7318
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1979.188 ; gain = 0.000 ; free physical = 635 ; free virtual = 3996
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -165,37 +180,44 @@ Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/sy
 Finished Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0/system_axi_gpio_1_0_in_context.xdc] for cell 'system_i/axi_gpio_1'
 Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_arbiter_puf_0_0/system_arbiter_puf_0_0/system_arbiter_puf_0_0_in_context.xdc] for cell 'system_i/arbiter_puf_0'
 Finished Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_arbiter_puf_0_0/system_arbiter_puf_0_0/system_arbiter_puf_0_0_in_context.xdc] for cell 'system_i/arbiter_puf_0'
+Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/system_ila_1_0/system_ila_0_0_in_context.xdc] for cell 'system_i/ila_1'
+Finished Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/system_ila_1_0/system_ila_0_0_in_context.xdc] for cell 'system_i/ila_1'
+Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/system_ila_2_0/system_ila_1_0_in_context.xdc] for cell 'system_i/ila_2'
+Finished Parsing XDC File [/home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/system_ila_2_0/system_ila_1_0_in_context.xdc] for cell 'system_i/ila_2'
 Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/pin.xdc]
 Finished Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/pin.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/krek07/Documents/PUF/src/xdc/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/area_1.xdc]
-Finished Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/area_1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/krek07/Documents/PUF/src/xdc/area_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/puf_loc.xdc]
-Finished Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/puf_loc.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/krek07/Documents/PUF/src/xdc/puf_loc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/area_2.xdc]
+Finished Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/area_2.xdc]
+Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/debug.xdc]
+WARNING: [Vivado 12-507] No nets matched 'system_i/axi_gpio_1/U0/AXI_LITE_IPIF_I_n_5'. [/home/krek07/Documents/PUF/src/xdc/debug.xdc:1]
+WARNING: [Vivado 12-507] No nets matched 'system_i/axi_gpio_1/U0/AXI_LITE_IPIF_I_n_11'. [/home/krek07/Documents/PUF/src/xdc/debug.xdc:2]
+WARNING: [Vivado 12-507] No nets matched 'system_i/axi_gpio_1/U0/AXI_LITE_IPIF_I_n_9'. [/home/krek07/Documents/PUF/src/xdc/debug.xdc:3]
+WARNING: [Vivado 12-507] No nets matched 'system_i/axi_gpio_1/U0/AXI_LITE_IPIF_I_n_10'. [/home/krek07/Documents/PUF/src/xdc/debug.xdc:4]
+Finished Parsing XDC File [/home/krek07/Documents/PUF/src/xdc/debug.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/krek07/Documents/PUF/src/xdc/debug.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/krek07/Documents/PUF/src/xdc/debug.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/krek07/Documents/PUF/PUF.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/krek07/Documents/PUF/PUF.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2059.211 ; gain = 0.000 ; free physical = 275 ; free virtual = 7230
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2081.984 ; gain = 0.000 ; free physical = 560 ; free virtual = 3918
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2059.211 ; gain = 0.000 ; free physical = 275 ; free virtual = 7230
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2081.984 ; gain = 0.000 ; free physical = 560 ; free virtual = 3918
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 338 ; free virtual = 7294
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 631 ; free virtual = 3981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 338 ; free virtual = 7294
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 631 ; free virtual = 3981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -219,11 +241,13 @@ Applied set_property DONT_TOUCH = true for system_i/axi_uartlite_0. (constraint 
 Applied set_property DONT_TOUCH = true for system_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/arbiter_puf_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ila_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ila_2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 338 ; free virtual = 7294
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 631 ; free virtual = 3981
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 339 ; free virtual = 7296
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 633 ; free virtual = 3984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,7 +313,7 @@ WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected 
 WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design system_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 317 ; free virtual = 7278
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 620 ; free virtual = 3974
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,13 +325,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 208 ; free virtual = 7165
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 483 ; free virtual = 3844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 207 ; free virtual = 7165
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 483 ; free virtual = 3844
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -319,7 +343,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 206 ; free virtual = 7164
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 481 ; free virtual = 3839
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -337,13 +361,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 201 ; free virtual = 7161
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 483 ; free virtual = 3841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 201 ; free virtual = 7160
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 483 ; free virtual = 3841
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -362,7 +386,7 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 201 ; free virtual = 7161
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 482 ; free virtual = 3841
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -383,9 +407,11 @@ Report BlackBoxes:
 |9     |system_axi_gpio_1_0         |         1|
 |10    |system_axi_uartlite_0_0     |         1|
 |11    |system_clk_wiz_1_0          |         1|
-|12    |system_mdm_1_0              |         1|
-|13    |system_microblaze_0_0       |         1|
-|14    |system_rst_clk_wiz_1_100M_0 |         1|
+|12    |system_ila_1_0              |         1|
+|13    |system_ila_2_0              |         1|
+|14    |system_mdm_1_0              |         1|
+|15    |system_microblaze_0_0       |         1|
+|16    |system_rst_clk_wiz_1_100M_0 |         1|
 +------+----------------------------+----------+
 
 Report Cell Usage: 
@@ -399,15 +425,17 @@ Report Cell Usage:
 |5     |system_clk_wiz_1_0          |     1|
 |6     |system_dlmb_bram_if_cntlr_0 |     1|
 |7     |system_dlmb_v10_0           |     1|
-|8     |system_ilmb_bram_if_cntlr_0 |     1|
-|9     |system_ilmb_v10_0           |     1|
-|10    |system_lmb_bram_0           |     1|
-|11    |system_mdm_1_0              |     1|
-|12    |system_microblaze_0_0       |     1|
-|13    |system_rst_clk_wiz_1_100M_0 |     1|
-|14    |system_xbar_0               |     1|
-|15    |IBUF                        |     1|
-|16    |OBUF                        |     1|
+|8     |system_ila_1_0              |     1|
+|9     |system_ila_2_0              |     1|
+|10    |system_ilmb_bram_if_cntlr_0 |     1|
+|11    |system_ilmb_v10_0           |     1|
+|12    |system_lmb_bram_0           |     1|
+|13    |system_mdm_1_0              |     1|
+|14    |system_microblaze_0_0       |     1|
+|15    |system_rst_clk_wiz_1_100M_0 |     1|
+|16    |system_xbar_0               |     1|
+|17    |IBUF                        |     1|
+|18    |OBUF                        |     1|
 +------+----------------------------+------+
 
 Report Instance Areas: 
@@ -421,26 +449,26 @@ Report Instance Areas:
 |5     |    xlconstant_0              |system_xlconstant_0_0                |     0|
 +------+------------------------------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 201 ; free virtual = 7160
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 482 ; free virtual = 3841
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2062.180 ; gain = 267.406 ; free physical = 253 ; free virtual = 7213
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2062.180 ; gain = 374.141 ; free physical = 254 ; free virtual = 7213
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 2084.953 ; gain = 269.375 ; free physical = 542 ; free virtual = 3900
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2084.953 ; gain = 375.141 ; free physical = 542 ; free virtual = 3900
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2062.180 ; gain = 0.000 ; free physical = 328 ; free virtual = 7286
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2084.953 ; gain = 0.000 ; free physical = 609 ; free virtual = 3967
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2062.180 ; gain = 0.000 ; free physical = 274 ; free virtual = 7232
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2084.953 ; gain = 0.000 ; free physical = 568 ; free virtual = 3926
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-65 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 2062.180 ; gain = 417.094 ; free physical = 398 ; free virtual = 7356
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2062.180 ; gain = 0.000 ; free physical = 398 ; free virtual = 7356
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 2084.953 ; gain = 419.086 ; free physical = 687 ; free virtual = 4045
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2084.953 ; gain = 0.000 ; free physical = 687 ; free virtual = 4045
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/krek07/Documents/PUF/PUF.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  7 23:01:56 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri May 10 23:27:09 2024...

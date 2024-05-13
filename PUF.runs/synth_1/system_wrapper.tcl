@@ -62,6 +62,14 @@ set_property used_in_implementation false [get_files -all /home/krek07/Documents
 set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xdc]
+set_property used_in_synthesis false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_1_0/system_ila_1_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_ila_2_0/system_ila_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/system_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/krek07/Documents/PUF/BD/system/ip/system_microblaze_0_0/data/mb_bootloop_le.elf]
 
@@ -76,11 +84,11 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/krek07/Documents/PUF/src/xdc/pin.xdc
 set_property used_in_implementation false [get_files /home/krek07/Documents/PUF/src/xdc/pin.xdc]
 
-read_xdc /home/krek07/Documents/PUF/src/xdc/area_1.xdc
-set_property used_in_implementation false [get_files /home/krek07/Documents/PUF/src/xdc/area_1.xdc]
+read_xdc /home/krek07/Documents/PUF/src/xdc/area_2.xdc
+set_property used_in_implementation false [get_files /home/krek07/Documents/PUF/src/xdc/area_2.xdc]
 
-read_xdc /home/krek07/Documents/PUF/src/xdc/puf_loc.xdc
-set_property used_in_implementation false [get_files /home/krek07/Documents/PUF/src/xdc/puf_loc.xdc]
+read_xdc /home/krek07/Documents/PUF/src/xdc/debug.xdc
+set_property used_in_implementation false [get_files /home/krek07/Documents/PUF/src/xdc/debug.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

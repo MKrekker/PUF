@@ -1,0 +1,485 @@
+23:17:29 **** Build of project arbiter_puf_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/bram_v4_3/src
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_9/src
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/gpio_v4_4/src
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/standalone_v7_0/src
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_3/src
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+Running Make libs in microblaze_0/libsrc/cpu_v2_9/src
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling cpu
+Running Make libs in microblaze_0/libsrc/gpio_v4_4/src
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling gpio
+Running Make libs in microblaze_0/libsrc/standalone_v7_0/src
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Finished building libraries
+
+**** Build of configuration Debug for project arbiter_puf ****
+
+Nothing to build for project arbiter_puf
+23:18:11 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2019.1/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld: /tools/Xilinx/SDK/2019.1/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:38: arbiter_puf.elf] Error 1
+23:38:47 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/tools/Xilinx/SDK/2019.1/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld: /tools/Xilinx/SDK/2019.1/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:38: arbiter_puf.elf] Error 1
+23:45:27 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:13:29: error: 'Gpio' undeclared (first use in this function); did you mean 'XGpio'?
+  Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+                             ^~~~
+                             XGpio
+../src/main.c:13:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:13:35: error: 'GPIO_EXAMPLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_BRAM_1_DEVICE_ID'?
+  Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+                                   ^~~~~~~~~~~~~~~~~~~~~~
+                                   XPAR_BRAM_1_DEVICE_ID
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+23:46:51 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7544	    668	   3148	  11360	   2c60	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+23:47:20 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7544	    668	   3148	  11360	   2c60	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+23:47:22 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+23:48:15 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7608	    668	   3148	  11424	   2ca0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+23:49:03 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7640	    668	   3148	  11456	   2cc0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+23:51:52 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:28:11: error: expected expression before 'XUartLite'
+  Status = XUartLite.Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+           ^~~~~~~~~
+../src/main.c:29:5: error: 'status' undeclared (first use in this function); did you mean 'Status'?
+  if(status != XST_SUCCESS){
+     ^~~~~~
+     Status
+../src/main.c:29:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+23:52:25 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:28:11: error: expected expression before 'XUartLite'
+  Status = XUartLite.Initialize(&UartLite, XPAR_UARTLITE_0_DEVICE_ID);
+           ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+23:53:12 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8296	    700	   3228	  12224	   2fc0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:17:00 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'set_challenge':
+../src/main.c:40:1: error: number of arguments doesn't match prototype
+ void set_challenge(){
+ ^~~~
+../src/main.c:11:6: error: prototype declaration
+ void set_challenge(int challenge);
+      ^~~~~~~~~~~~~
+../src/main.c:42:22: error: expected expression before 'XGpio'
+  XGpio_DiscreteWrite(XGpio *InstancePtr, unsigned Channel, u32 Mask);
+                      ^~~~~
+../src/main.c:42:2: error: too few arguments to function 'XGpio_DiscreteWrite'
+  XGpio_DiscreteWrite(XGpio *InstancePtr, unsigned Channel, u32 Mask);
+  ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:2:
+../../arbiter_puf_bsp/microblaze_0/include/xgpio.h:181:6: note: declared here
+ void XGpio_DiscreteWrite(XGpio *InstancePtr, unsigned Channel, u32 Mask);
+      ^~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+00:18:18 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8296	    700	   3228	  12224	   2fc0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:19:24 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8296	    700	   3228	  12224	   2fc0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:21:20 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'get_response':
+../src/main.c:51:27: error: incompatible type for argument 1 of 'XGpio_DiscreteRead'
+  ret = XGpio_DiscreteRead(Gpio_1, 2);
+                           ^~~~~~
+In file included from ../src/main.c:2:
+../../arbiter_puf_bsp/microblaze_0/include/xgpio.h:180:31: note: expected 'XGpio *' {aka 'struct <anonymous> *'} but argument is of type 'XGpio' {aka 'struct <anonymous>'}
+ u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+                        ~~~~~~~^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+00:21:39 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8296	    700	   3228	  12224	   2fc0	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:27:15 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:41:6: error: 'challenge' undeclared (first use in this function); did you mean 'challlenge'?
+  for(challenge  = 0; challenge < 100000; challenge++){
+      ^~~~~~~~~
+      challlenge
+../src/main.c:41:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:48:13: error: 'resp' undeclared (first use in this function); did you mean 'resp32'?
+    resp32 = resp | (response << i);
+             ^~~~
+             resp32
+../src/main.c:20:6: warning: variable 'resp32' set but not used [-Wunused-but-set-variable]
+  int resp32;
+      ^~~~~~
+../src/main.c:19:6: warning: unused variable 'challlenge' [-Wunused-variable]
+  int challlenge;
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+00:28:48 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:13: error: 'resp' undeclared (first use in this function); did you mean 'resp32'?
+    resp32 = resp | (response << i);
+             ^~~~
+             resp32
+../src/main.c:48:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:20:6: warning: variable 'resp32' set but not used [-Wunused-but-set-variable]
+  int resp32;
+      ^~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+00:29:00 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:13: error: 'resp' undeclared (first use in this function); did you mean 'resp32'?
+    resp32 = resp | (response << i);
+             ^~~~
+             resp32
+../src/main.c:48:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:20:6: warning: variable 'resp32' set but not used [-Wunused-but-set-variable]
+  int resp32;
+      ^~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+00:29:12 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9212	    700	   3232	  13144	   3358	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:32:27 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9292	    700	   3232	  13224	   33a8	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+00:42:35 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+00:43:37 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+00:48:27 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+00:52:42 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+01:06:48 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+01:08:00 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:46: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^
+../src/main.c:51:46: error: expected ')' before 'n'
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^~
+                                              )
+../src/main.c:51:48: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                                ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+01:08:16 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:46: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^
+../src/main.c:51:46: error: expected ')' before 'n'
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^~
+                                              )
+../src/main.c:51:48: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                                ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+01:08:37 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:46: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^
+../src/main.c:51:46: error: expected ')' before 'n'
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                              ^~
+                                              )
+../src/main.c:51:48: error: stray '\' in program
+    xil_printf("challenge = %d; response = %h"\n\r, challenge, resp32);
+                                                ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+01:09:11 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9292	    700	   3232	  13224	   33a8	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+01:09:13 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.
+01:10:33 **** Auto Build of configuration Debug for project arbiter_puf ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../arbiter_puf_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: arbiter_puf.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../arbiter_puf_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "arbiter_puf.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: arbiter_puf.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size arbiter_puf.elf  |tee "arbiter_puf.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9296	    700	   3228	  13224	   33a8	arbiter_puf.elf
+Finished building: arbiter_puf.elf.size
+ 
+01:10:36 **** Incremental Build of configuration Debug for project arbiter_puf ****
+make all 
+make: Nothing to be done for 'all'.

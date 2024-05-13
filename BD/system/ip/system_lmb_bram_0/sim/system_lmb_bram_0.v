@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:blk_mem_gen:8.4
-// IP Revision: 4
+// IP Revision: 3
 
 `timescale 1ns/1ps
 
@@ -105,7 +105,7 @@ output wire [31 : 0] doutb;
 output wire rsta_busy;
 output wire rstb_busy;
 
-  blk_mem_gen_v8_4_4 #(
+  blk_mem_gen_v8_4_3 #(
     .C_FAMILY("spartan7"),
     .C_XDEVICEFAMILY("spartan7"),
     .C_ELABORATION_DIR("./"),

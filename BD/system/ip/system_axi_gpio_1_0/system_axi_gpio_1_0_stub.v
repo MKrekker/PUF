@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Mon May  6 23:27:14 2024
+// Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+// Date        : Sat May 11 14:03:10 2024
 // Host        : krek07-HP-Laptop-15s-eq2xxx running 64-bit Ubuntu 22.04.3 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top system_axi_gpio_1_0 -prefix
-//               system_axi_gpio_1_0_ system_axi_gpio_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/krek07/Documents/PUF/BD/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_stub.v
 // Design      : system_axi_gpio_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_gpio,Vivado 2019.2" *)
+(* x_core_info = "axi_gpio,Vivado 2019.1" *)
 module system_axi_gpio_1_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr, 
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, s_axi_arready, 
